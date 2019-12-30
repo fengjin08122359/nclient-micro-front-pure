@@ -3,49 +3,48 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.rgHandle = exports.rgData = exports.displayData = exports.displayHandle = exports.register = exports.websocket = exports.logger = exports.storage = exports.httpFrame = exports.websocketFrame = exports.keyFrame = exports.Handle = exports.DataHandle = exports.jsonplink = exports.httplink = exports.validator = exports.storeImg = exports.screenCapture = exports.mobileInput = exports.langPackage = exports.faceIco = exports.convertTree = exports.changeTitle = exports.config = exports.commonFrame = exports.controlFrame = exports.stateFrame = exports.dataFrame = undefined;
+exports.httpFrame = exports.websocketFrame = exports.EventBus = exports.rgHandle = exports.rgData = exports.displayData = exports.displayHandle = exports.register = exports.keyFrame = exports.Handle = exports.DataHandle = exports.validator = exports.convertTree = undefined;
 
-var _microUtil = require('@mikefeng110808/micro-util');
+var _convertTree = require('./common/convertTree');
 
-var _lang = require('./lang');
+var _convertTree2 = _interopRequireDefault(_convertTree);
 
-var _lang2 = _interopRequireDefault(_lang);
+var _validator = require('./common/validator');
 
-var _screenCapture = require('./screenCapture');
+var _validator2 = _interopRequireDefault(_validator);
 
-var _screenCapture2 = _interopRequireDefault(_screenCapture);
+var _DataHandle = require('./util/DataHandle');
+
+var _DataHandle2 = _interopRequireDefault(_DataHandle);
+
+var _Handle = require('./util/Handle');
+
+var _Handle2 = _interopRequireDefault(_Handle);
+
+var _keyFrame = require('./util/key-frame');
+
+var _keyFrame2 = _interopRequireDefault(_keyFrame);
+
+var _register = require('./util/register');
+
+var _register2 = _interopRequireDefault(_register);
+
+var _EventBus = require('./util/EventBus');
+
+var _EventBus2 = _interopRequireDefault(_EventBus);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var dataFrame = exports.dataFrame = new _microUtil.EventBus('dataFrame');
-
-var stateFrame = exports.stateFrame = new _microUtil.EventBus('stateFrame');
-
-var controlFrame = exports.controlFrame = new _microUtil.EventBus('controlFrame');
-
-var commonFrame = exports.commonFrame = new _microUtil.EventBus('commonFrame');
-
-exports.config = _microUtil.config;
-exports.changeTitle = _microUtil.changeTitle;
-exports.convertTree = _microUtil.convertTree;
-exports.faceIco = _microUtil.faceIco;
-exports.langPackage = _lang2.default;
-exports.mobileInput = _microUtil.mobileInput;
-exports.screenCapture = _screenCapture2.default;
-exports.storeImg = _microUtil.storeImg;
-exports.validator = _microUtil.validator;
-exports.httplink = _microUtil.httplink;
-exports.jsonplink = _microUtil.jsonplink;
-exports.DataHandle = _microUtil.DataHandle;
-exports.Handle = _microUtil.Handle;
-exports.keyFrame = _microUtil.keyFrame;
-exports.websocketFrame = _microUtil.websocketFrame;
-exports.httpFrame = _microUtil.httpFrame;
-exports.storage = _microUtil.storage;
-exports.logger = _microUtil.logger;
-exports.websocket = _microUtil.websocket;
-exports.register = _microUtil.register;
-exports.displayHandle = _microUtil.displayHandle;
-exports.displayData = _microUtil.displayData;
-exports.rgData = _microUtil.rgData;
-exports.rgHandle = _microUtil.rgHandle;
+exports.convertTree = _convertTree2.default;
+exports.validator = _validator2.default;
+exports.DataHandle = _DataHandle2.default;
+exports.Handle = _Handle2.default;
+exports.keyFrame = _keyFrame2.default;
+exports.register = _register2.default;
+exports.displayHandle = _register.displayHandle;
+exports.displayData = _register.displayData;
+exports.rgData = _register.rgData;
+exports.rgHandle = _register.rgHandle;
+exports.EventBus = _EventBus2.default;
+exports.websocketFrame = _keyFrame.websocketFrame;
+exports.httpFrame = _keyFrame.httpFrame;
